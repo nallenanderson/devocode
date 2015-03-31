@@ -3,6 +3,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+$black1: 				#131313;
+$black2:				#333333;
 $blue1:         #548AD0;
 $blue2:         #1356AB;
 $blue3:         #AAC9F0;
@@ -34,8 +36,8 @@ NAVBAR
 	margin-bottom: 0;
   padding: 20px 0;
   border-radius: 0;
-  background: $blue1;
-  border: 1px solid $blue2;
+  background: $black1;
+  border-bottom: 2px solid $black2;
   color: $white;
   .navbar-toggle {
     border-color: $blue3;
@@ -48,10 +50,26 @@ NAVBAR
   }
   .navbar-brand, .navbar-right li a {
     color: $white;
+    &:last-child {
+    	background: transparent;
+    	}
     &:hover {
       color: $blue3;
     }
   }
+}
+
+/************************************
+FOOTER 
+************************************/
+
+footer {
+	background: $blue3;
+	padding: 1.2em 0;
+	color: $white;
+	h4 {
+		margin: 0;
+	}
 }
 
 /************************************
@@ -64,6 +82,7 @@ HOMEPAGE
   height: 400px;
   margin: 0;
   padding: 20px;
+  overflow-y: hidden;
   h1 {
   	text-transform: uppercase;
   	font-size: 5em;
@@ -74,3 +93,5 @@ HOMEPAGE
   	text-shadow: rgb(27,27,27) 0.5px 0.5px;
   }
 }
+
+
