@@ -28,6 +28,37 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 }
 
+section {
+	padding: 6em 0;
+}
+
+button.close {
+  font-size: 2.5em;  // 40px / 16px
+  font-weight: 200;
+  .modal & {
+    padding: 0.1em 0.1em 0 0;
+
+  }
+}
+
+.container
+.alert {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+.alert-dismissible .close {
+  top: -2px;
+}
+
+.btn-block {
+  margin-bottom: 1em;
+}
+
 /************************************
 NAVBAR
 ************************************/
@@ -36,9 +67,9 @@ NAVBAR
 	margin-bottom: 0;
   padding: 20px 0;
   border-radius: 0;
-  background: $black1;
-  border-bottom: 2px solid $black2;
-  color: $white;
+  background: transparent;
+  border: none;
+  border-top: 6px solid $blue1;
   .navbar-toggle {
     border-color: $blue3;
     &:hover {
@@ -49,12 +80,14 @@ NAVBAR
     }
   }
   .navbar-brand, .navbar-right li a {
-    color: $white;
+    color: $blue1;
+    font-weight: 400;
+    text-shadow: $blue2 -0.5px -0.5px;
     &:last-child {
     	background: transparent;
     	}
     &:hover {
-      color: $blue3;
+      color: $blue1;
     }
   }
 }
@@ -76,21 +109,34 @@ footer {
 HOMEPAGE  
 ************************************/
 
-#homeBack {
+#main {
   background: image-url('lemons.jpg') center top;
   background-size: cover;
-  height: 400px;
+  background-position: center center; 
+  width: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 8em 0;
   overflow-y: hidden;
   h1 {
   	text-transform: uppercase;
-  	font-size: 5em;
+  	font-size: 3em;
   	color: $white;
   }
   p {
   	color: #eee;
-  	text-shadow: rgb(27,27,27) 0.5px 0.5px;
+  	text-shadow: $black1 0.5px 0.5px;
+  }
+}
+
+#second {
+	background: $blue2;
+}
+
+#radient {
+  background: linear-gradient(to bottom, #2A8695,  #2A8695 5%, #BDF4D8 95%);
+  color: $white;
+  h1 {
+    font-size: 5em;
   }
 }
 

@@ -1,0 +1,68 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="panel panel-default">
+
+          <div class="panel-heading">
+            <h2>Edit <%= resource.name %>'s Info</h2>
+          </div>
+
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= devise_error_messages! %>
+          <div class="panel-body">
+
+            <div class="form-group">
+              <%= f.label :name %>
+              <%= f.text_field :name, autofocus: true, required: true, class: "form-control" %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, class: "form-control" %>
+            </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+
+            <div class="form-group">
+              <%= f.label :password %> <i class="profile">(leave blank if you don't want to change it)</i>
+              <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :current_password %> <i class="profile">(we need your current password to confirm your changes)</i>
+              <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.submit "Update", class: "btn btn-info btn-lg" %>
+            </div>
+          </div> <!-- Close Panel Body -->
+        <% end %>
+        </div> <!-- Close Panel Default -->
+      </div> <!-- Close Col-MD-7 -->
+
+      <div class="col-md-5">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2>Close My Account</h2>
+          </div>
+
+          <div class="panel-body">
+            <p class="lead">Are you unhappy with your account? Let us know if there is anything that we could do to make your experience better.  We sure would hate to see you go...</p>
+            <p class="lead">If there is nothing we can do, you can cancel and close your account here.
+            <%= button_to "Close my account", registration_path(resource_name), data: { confirm: "Are you sure? Once you cancel your account all your information and activity will be permanently deleted." }, method: :delete, class: "btn btn-lg btn-danger pull-right" %></p>
+          </div> <!-- Close Panel Body -->
+        </div> <!-- Close Panel Default -->
+      </div> <!-- Close Col-MD-5 -->
+          
+    </div> <!-- Close Row -->
+  </div>
+</section>
