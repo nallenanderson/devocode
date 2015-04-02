@@ -1,5 +1,22 @@
 <section>
+
 	<div class="container">
+
 		<h2>These are my courses</h2>
+
+		<% @courses.each do |course| %>
+    	<div class="courses">
+	    	<%= link_to image_tag(course.image.url(:medium)), course %>
+		    <h3><%= link_to course.name, course %></h3>
+		    <%= link_to 'Show', course, class: 'btn btn-info' %>
+		    <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-primary' %>
+		    <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+		   </div>
+
+	  <% end %>
+
+  	<%= link_to "Create Course", new_course_path, class: 'btn btn-default' %>
+
 	</div>
+	
 </section>

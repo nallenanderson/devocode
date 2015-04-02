@@ -3,6 +3,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+$container-large-desktop:  (940px + $grid-gutter-width);
+
 $black1: 				#131313;
 $black2:				#333333;
 $blue1:         #548AD0;
@@ -140,4 +142,18 @@ HOMEPAGE
   }
 }
 
+/************************************
+COURSES  
+************************************/
+
+.courses {
+  border: rgba($black1, 0.4) 4px solid;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px;
+  float: left;
+  img {
+    border-radius: 100%;
+  }
+}
 

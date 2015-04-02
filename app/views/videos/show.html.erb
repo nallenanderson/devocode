@@ -1,0 +1,27 @@
+<div id="wistia_<%= @video.link %>" class="wistia_embed" style="width:940px;height:588px;"> </div>
+
+<h2><%= @video.name %></h2>
+
+<p>
+  <%= raw @video.description %>
+</p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
+
+<script>
+
+var script = document.createElement('script');
+script.src= 'https://fast.wistia.com/assets/external/E-v1.js';
+script.onload = function(){
+  console.log('loaded');
+  var wistiaEmbed = Wistia.embed("<%= @video.link %>", {
+    videoFoam: true
+  });
+}
+document.body.appendChild(script);
+
+</script>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
