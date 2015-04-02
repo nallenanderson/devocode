@@ -16,9 +16,12 @@
       <div class="collapse navbar-collapse collapso">
 
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Team", about_path %></li>
           <li><%= link_to "Courses", courses_path %></li>
+          <% if user_signed_in? %>
+          <% else %>
+            <li><%= link_to "Sign In", user_session_path %></li>
+          <% end %>
           <% if user_signed_in? %>
             <li><%= link_to "My Profile", edit_user_registration_path %></li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-info" %></li>

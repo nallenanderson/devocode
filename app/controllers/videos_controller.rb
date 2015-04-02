@@ -1,13 +1,14 @@
 class VideosController < ApplicationController
   before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_course, only: [:show, :edit, :update, :destroy]
 
   def index
-    @course = Course.find(params[:course_id])
+    
     @videos = Video.all
   end
 
   def show
-    @course = Course.find(params[:course_id])
+    
     @video = Video.find(params[:id])
   end
 
@@ -19,7 +20,7 @@ class VideosController < ApplicationController
   end
 
   def create
-    @course = Course.find(params[:course_id])
+    
     @video = Video.new(video_params)
     @video.course_id = @course_id
 
@@ -47,7 +48,7 @@ class VideosController < ApplicationController
   end
 
   def destroy
-    @course = Course.find(params[:course_id])
+    
     @video = Video.find(params[:id])
     @video.destroy
     respond_to do |format|
@@ -57,7 +58,11 @@ class VideosController < ApplicationController
   end
 
   private
-    
+
+    def set_course
+      @course = Course.find(params[:course_id])
+    end
+
     def set_video
       @video = Video.find(params[:id])
     end

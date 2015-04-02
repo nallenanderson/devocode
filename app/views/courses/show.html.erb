@@ -4,7 +4,9 @@
 		<p class="lead"><%= @course.description %></p>
 		<%= image_tag @course.image.url(:medium) %>
 
-		<%= link_to "Back", courses_path, class: "btn btn-lg btn-danger" %>
-		<%= link_to "Edit", edit_course_path(@course), class: "btn btn-lg btn-info" %>
+		<% if current_user.admin == true %>
+			<%= link_to "Back", courses_path, class: "btn btn-lg btn-danger" %>
+			<%= link_to "Edit", edit_course_path(@course), class: "btn btn-lg btn-info" %>
+		<% end %>
 	</div>
 </section>
