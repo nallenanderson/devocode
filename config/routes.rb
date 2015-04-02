@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :videos
-
-  resources :courses
+  resources :courses do
+    resources :videos
+  end
   devise_for :users
   get "about" => "pages#about"
   root 'pages#home'

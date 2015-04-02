@@ -1,13 +1,23 @@
-<div id="wistia_<%= @video.link %>" class="wistia_embed" style="width:940px;height:588px;"> </div>
+<section>
 
-<h2><%= @video.name %></h2>
+	<div class="container">
 
-<p>
-  <%= raw @video.description %>
-</p>
+		<div class="video">
+			<div id="wistia_<%= @video.link %>" class="wistia_embed" style="width:940px;height:588px;"></div>
+		</div>
 
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+		<h2><%= @video.name %></h2>
+
+		<p>
+		  <%= raw @video.description %>
+		</p>
+
+		<%= link_to 'Edit', edit_video_path(@video) %> |
+		<%= link_to 'Back', videos_path %>
+
+	</div>
+
+</section>
 
 <script>
 
@@ -22,6 +32,3 @@ script.onload = function(){
 document.body.appendChild(script);
 
 </script>
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>

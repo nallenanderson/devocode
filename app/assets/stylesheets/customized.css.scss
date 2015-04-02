@@ -157,3 +157,19 @@ COURSES
   }
 }
 
+.video {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/************************************
+MEDIA QUERIES AND RESPONSIVENESS
+************************************/
+
+
+@media (max-width: 940px) {
+  .video {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
