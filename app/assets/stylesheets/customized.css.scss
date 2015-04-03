@@ -10,6 +10,7 @@ $black2:				#333333;
 $blue1:         #548AD0;
 $blue2:         #1356AB;
 $blue3:         #AAC9F0;
+$green1:        #2A8695;
 $white:         #FCFCFC;
 $font1:					"Open Sans", sans-serif;
 $font2:					"Roboto", sans-serif;
@@ -18,7 +19,7 @@ $font2:					"Roboto", sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto:400,100,300,500,700");
 
 body {
-	font-family: $font1;
+	font-family: $font2;
 	font-weight: 200;
 	font-size: 16px;
   color: $blue1;
@@ -26,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font2;
+	font-family: $font1;
 	font-weight: 300;
 }
 
@@ -70,11 +71,11 @@ NAVBAR
 	margin-bottom: 0;
   padding: 20px 0;
   border-radius: 0;
-  background: transparent;
+  background: rgba($black1, 0.75);
   border: none;
-  border-top: 6px solid $blue1;
+  border-top: 6px solid $green1;
   .navbar-toggle {
-    border-color: $blue3;
+    border-color: $black1;
     &:hover {
       background: $white;
     }
@@ -83,14 +84,13 @@ NAVBAR
     }
   }
   .navbar-brand, .navbar-right li a {
-    color: $blue1;
+    color: $white;
     font-weight: 400;
-    text-shadow: $blue2 -0.5px -0.5px;
     &:last-child {
     	background: transparent;
     	}
     &:hover {
-      color: $blue1;
+      color: $green1;
     }
   }
 }
@@ -120,6 +120,7 @@ HOMEPAGE
   margin: 0;
   padding: 8em 0;
   overflow-y: hidden;
+  margin-top: -100px;
   h1 {
   	text-transform: uppercase;
   	font-size: 3em;
@@ -132,7 +133,8 @@ HOMEPAGE
 }
 
 #second {
-	background: $blue2;
+	background: linear-gradient(to bottom, #2A8695,  #2A8695 5%, #BDF4D8 95%);
+  color: $white;
 }
 
 #radient {
