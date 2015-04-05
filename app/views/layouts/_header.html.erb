@@ -3,18 +3,36 @@
     <!-- <div class="container-fluid"> -->
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapso">
+        <button type="button" id="right-menu" class="navbar-toggle" data-toggle="collapse"  href="#sidr-right">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to "DEVOCODE", root_path, class:"navbar-brand" %>
+
+        <%= link_to "devocode", root_path, class: "navbar-brand" %>
+      </div>
+
+      <div id="sidr-right">
+        <ul>
+          <li><%= link_to "Blog", about_path %></li>
+          <li><%= link_to "Courses", courses_path %></li>
+          <% if user_signed_in? %>
+          <% else %>
+            <li><%= link_to "Sign In", user_session_path %></li>
+          <% end %>
+          <% if user_signed_in? %>
+            <li><%= link_to "My Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
+        </ul>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse collapso">
-
+      <div class="collapse navbar-collapse">
+        
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Blog", about_path %></li>
           <li><%= link_to "Courses", courses_path %></li>
@@ -24,12 +42,21 @@
           <% end %>
           <% if user_signed_in? %>
             <li><%= link_to "My Profile", edit_user_registration_path %></li>
-            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-info" %></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-info" %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path, class: "btn" %></li>
           <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
     <!--</div> /.container-fluid -->
   </div>
 </nav>
+
+<script>
+$(document).ready(function() {
+    $('#right-menu').sidr({
+      name: 'sidr-right',
+      side: 'right'
+    });
+});
+</script>

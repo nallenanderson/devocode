@@ -22,7 +22,7 @@ body {
 	font-family: $font2;
 	font-weight: 200;
 	font-size: 16px;
-  color: $blue1;
+  color: $black2;
   margin: 0; 
 }
 
@@ -80,17 +80,45 @@ NAVBAR
       background: $white;
     }
     .icon-bar {
-      background: $blue3;
+      background: $green1;
     }
   }
-  .navbar-brand, .navbar-right li a {
+  .navbar-brand {
     color: $white;
     font-weight: 400;
-    &:last-child {
-    	background: transparent;
-    	}
+    font-size: 1.8em;
     &:hover {
       color: $green1;
+    }
+  }
+  .navbar-nav.navbar-right li a {
+    color: $white;
+    font-weight: 300;
+    &:hover {
+      color: $green1;
+    }
+    &.btn {
+      border: 1px solid $green1;
+      border-radius: 5px;
+      color: $green1;
+      &:hover {
+        color: $white;
+        background: $green1;
+        font-weight: 400;
+      }
+    }
+  }
+  #sidr-right ul li a{
+    color: $white;
+    &:hover {
+      color: $green1;
+    }
+  }
+  .navbar-toggle {
+    border: none;
+    .icon-bar {
+      height: 4px;
+      color: $white;
     }
   }
 }
@@ -100,7 +128,7 @@ FOOTER
 ************************************/
 
 footer {
-	background: $blue3;
+	background: $green1;
 	padding: 1.2em 0;
 	color: $white;
 	h4 {
