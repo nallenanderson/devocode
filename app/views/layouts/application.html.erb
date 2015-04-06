@@ -14,8 +14,10 @@
 <% flash.each do |name, msg| %>
 	<div class="container">	
 		<%= content_tag(:div, msg, class: "alert alert-dismissible fade in") do %>
-			<%= msg %>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<div class="container">
+				<%= msg %>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
 		<% end %>
 	</div>
 <% end %>

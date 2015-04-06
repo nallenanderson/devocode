@@ -12,6 +12,7 @@ gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise', '~> 3.4.1'
+gem 'awesome_print', group: :development
 gem "paperclip", "~> 4.2"
 gem 'sdoc', '~> 0.4.0', group: :doc
 

@@ -5,14 +5,20 @@
 		<h2>These are my courses</h2>
 
 		<% @courses.each do |course| %>
-    	<div class="courses">
-	    	<%= link_to image_tag(course.image.url(:medium)), course, class: "img-responsive cold" %>
-		    <h3><%= link_to course.name, course %></h3>
-		    <% if user_signed_in? && current_user.admin == true %>
-			    <%= link_to 'Show', course, class: 'btn btn-info' %>
-			    <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-primary' %>
-			    <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-			  <% end %>
+			<div class="col-md-4">
+    		<div class="courses">
+		    	<%= link_to image_tag(course.image.url(:medium)), course, class: "img-responsive cold" %>
+		    	<div class="courseinfo">
+				    <h3><%= link_to course.name, course %></h3>
+				    <p class="lead"><%= course.description %></p>
+				    <%= link_to "View Now", course, class: "btn btn-lg btnStart" %><br>
+				    <% if user_signed_in? && current_user.admin == true %>
+					    <%= link_to 'Show', course, class: 'btn btn-info' %>
+					    <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-primary' %>
+					    <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+					  <% end %>
+					 </div>
+				 </div>
 		   </div>
 
 	  <% end %>

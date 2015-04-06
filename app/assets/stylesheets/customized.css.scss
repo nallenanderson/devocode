@@ -12,6 +12,7 @@ $blue2:         #1356AB;
 $blue3:         #AAC9F0;
 $green1:        #2A8695;
 $white:         #FCFCFC;
+$back:          #f4f5f7;
 $font1:					"Open Sans", sans-serif;
 $font2:					"Roboto", sans-serif;
 
@@ -19,20 +20,25 @@ $font2:					"Roboto", sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto:400,100,300,500,700");
 
 body {
-	font-family: $font2;
+	font-family: $font1;
 	font-weight: 200;
 	font-size: 16px;
   color: $black2;
   margin: 0; 
+  background-color: $back;
+}
+
+a, a:hover {
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font1;
+	font-family: $font2;
 	font-weight: 300;
 }
 
 section {
-	padding: 6em 0;
+  padding: 2.2em 0;
 }
 
 button.close {
@@ -52,7 +58,11 @@ button.close {
   left: 0;
   width: 100%;
   border-radius: 0;
-  background: rgba(#d9edf7, 0.6)
+  font-size: 1.5em;
+  padding-top: 1.2em;
+  background: rgba(#d9edf7, 0.95);
+  border: none;
+  border-bottom: 8px solid $blue1;
 }
 
 .alert-dismissible .close {
@@ -178,11 +188,29 @@ COURSES
 ************************************/
 
 .courses {
-  border: rgba($black1, 0.4) 4px solid;
-  border-radius: 8px;
+  border: rgba($black1, 0.2) 1px solid;
+  border-radius: 5px;
+  background: $white;
   padding: 10px;
   margin: 20px;
+  text-align: center;
   float: left;
+  h3 a {
+    color: $black1;
+    font-weight: 400;
+    &:hover {
+      color: $blue2;
+    }
+  }
+  .courseinfo {
+    padding: 0 2em;
+  }
+  .btnStart {
+    margin: 0.5em 0.3em;
+    padding: 0.8em 3em;
+    color: $white;
+    background: $green1;
+  }
   img {
     border-radius: 100%;
     -webkit-transition: all .5s ease-in-out;
