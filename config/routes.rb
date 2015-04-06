@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   get 'errors/file_not_found'
-
   get 'errors/unprocessable'
-
   get 'errors/internal_server_error'
 
   resources :courses do
     resources :videos
   end
+
   devise_for :users
+
   get "about" => "pages#about"
   root 'pages#home'
 
