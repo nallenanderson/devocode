@@ -1,6 +1,5 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
 
   # GET /blogs
   # GET /blogs.json
@@ -70,6 +69,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body, :author)
+      params.require(:blog).permit(:title, :body, :author, :stdesc)
     end
 end
