@@ -12,6 +12,7 @@ $blue2:         #1356AB;
 $blue3:         #AAC9F0;
 $green1:        #2A8695;
 $white:         #FCFCFC;
+$lightgrey:     #ECF0F1;
 $back:          #f4f5f7;
 $font1:					"Open Sans", sans-serif;
 $font2:					"Roboto", sans-serif;
@@ -192,7 +193,7 @@ COURSES
   border-radius: 5px;
   background: $white;
   padding: 10px;
-  margin: 20px;
+  margin: 20px 0;
   text-align: center;
   float: left;
   h3 a {
@@ -227,6 +228,35 @@ COURSES
 .video {
   max-width: 900px;
   margin: 0 auto;
+}
+
+#blogs {
+  margin: 0 auto;
+  width: 700px;
+  border-top: 6px solid $blue1;
+  background: $white;
+  color: $black2;
+  padding: 0 0.5em;
+  .heading {
+    background: rgba($lightgrey, 0.5);
+    color: $green1;
+    margin: 0 -0.5em;
+    padding: 0.5em 0.7em; 
+    h4 {
+      font-weight: 400;
+    }
+  }
+  .blog {
+    padding: 1em;
+    border-bottom: 2px solid rgba($black1, 0.4);
+    h2 {
+      font-weight: 500;
+      margin: 0.8em 0;
+    }
+    h4 {
+      color: rgba($black1, 0.5);
+    }
+  }
 }
 
 

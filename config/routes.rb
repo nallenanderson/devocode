@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :blogs
+
   get 'errors/file_not_found'
   get 'errors/unprocessable'
   get 'errors/internal_server_error'

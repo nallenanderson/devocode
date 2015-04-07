@@ -1,0 +1,30 @@
+<section id="radient">
+  <div id="blogs">
+    <div class="heading">
+      <h4>Blogging for faster learning</h4>
+    </div>
+  
+    <% @blogs.each do |blog| %>
+      <div class="blog">
+        <h2><%= blog.title %></h2>
+        <%= raw(blog.body.truncate(200)) %>
+        <h4><%= blog.author %></h4>
+        <h4><%= blog.created_at %></h4>
+        <% if user_signed_in? && current_user.admin == true %>
+          <%= link_to 'Show', blog, class: "btn btn-default" %>
+          <%= link_to 'Edit', edit_blog_path(blog), class: "btn btn-info" %>
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        <% end %>
+      </div>
+    <% end %>
+  
+</div>
+</section>
+
+
+    
+
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>
