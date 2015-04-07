@@ -245,13 +245,13 @@ COURSES
 }
 
 #blogs {
-  margin: 0 auto;
-  width: 700px;
   border: 1px solid rgba($black1, 0.13);
   border-top: 6px solid $blue1;
+  border-radius: 0 0 5px 5px;
   background: $white;
   color: $black2;
-  padding: 0 0.8em;
+  padding: 0 0.8em 1em 0.8em;
+  margin-bottom: 2em;
   .heading {
     background: rgba($lightgrey, 0.83);
     color: $blue1;
