@@ -12,5 +12,5 @@
  *
  *= require_tree .
  *= require_self
- *= require mmenu
+ *= require jquery.sidr.dark
  */
