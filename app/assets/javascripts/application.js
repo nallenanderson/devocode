@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require jquery.sidr
+//= require mmenu
 //= require bootstrap-sprockets
 //= require_tree .
 //= require turbolinks
