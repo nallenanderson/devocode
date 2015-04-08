@@ -13,14 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
-//= require bootstrap-sprockets
 //= require jquery.sidr
+//= require bootstrap-sprockets
 //= require_tree .
-
-$(document).ready(function() {
-    $('#right-menu').sidr({
-      name: 'sidr-right',
-      side: 'right'
-    });
-});
+//= require turbolinks
