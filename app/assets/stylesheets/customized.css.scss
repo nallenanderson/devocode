@@ -5,8 +5,8 @@
 
 $container-large-desktop:  (940px + $grid-gutter-width);
 
-$black1: 				#131313;
-$black2:				#333333;
+$black1:        #131313;
+$black2:        #333333;
 $blue1:         #548AD0;
 $blue2:         #1356AB;
 $blue3:         #AAC9F0;
@@ -15,16 +15,16 @@ $white:         #FCFCFC;
 $lightgrey:     #ECF0F1;
 $yellow:        #F3BB41;
 $back:          #f4f5f7;
-$font1:					"Open Sans", sans-serif;
-$font2:					"Roboto", sans-serif;
+$font1:         "Open Sans", sans-serif;
+$font2:         "Roboto", sans-serif;
 
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto:400,100,300,500,700");
 
 body {
-	font-family: $font1;
-	font-weight: 200;
-	font-size: 16px;
+  font-family: $font1;
+  font-weight: 200;
+  font-size: 16px;
   color: $black2;
   margin: 0; 
   background: linear-gradient(rgba($back, 0.85), rgba($back, 0.65)), image-url('backimg.png') repeat;
@@ -35,8 +35,8 @@ a, a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font2;
-	font-weight: 300;
+  font-family: $font2;
+  font-weight: 300;
 }
 
 section {
@@ -88,7 +88,7 @@ NAVBAR
 ************************************/
 
 .navbar-default {
-	margin-bottom: 0;
+  margin-bottom: 0;
   padding: 20px 0;
   border-radius: 0;
   background: rgba($black1, 0.75);
@@ -143,17 +143,22 @@ NAVBAR
   }
 }
 
+.sidr {
+  font-family: $font1 !important;
+  font-weight: 400 !important;
+}
+
 /************************************
 FOOTER 
 ************************************/
 
 footer {
-	background: $green1;
-	padding: 1.2em 0;
-	color: $white;
-	h4 {
-		margin: 0;
-	}
+  background: $green1;
+  padding: 1.2em 0;
+  color: $white;
+  h4 {
+    margin: 0;
+  }
 }
 
 //Disqus Footer
@@ -165,28 +170,29 @@ footer {
 HOMEPAGE  
 ************************************/
 
-#main {
+.main {
   background: image-url('lemons.jpg') center top;
   background-size: cover;
   background-position: center center; 
   width: 100%;
   margin: 0;
-  padding: 8em 0;
+  padding-top: 20%;
   overflow-y: hidden;
   margin-top: -100px;
   h1 {
-  	text-transform: uppercase;
-  	font-size: 3em;
-  	color: $white;
+    text-transform: uppercase;
+    font-size: 4em;
+    color: $white;
+    font-weight: 400;
   }
   p {
-  	color: #eee;
-  	text-shadow: $black1 0.5px 0.5px;
+    color: #eee;
+    text-shadow: $black1 0.5px 0.5px;
   }
 }
 
 #second {
-	background: linear-gradient(to bottom, #2A8695,  #2A8695 5%, #BDF4D8 95%);
+  background: linear-gradient(to bottom, #2A8695,  #2A8695 5%, #BDF4D8 95%);
   color: $white;
 }
 
