@@ -3,20 +3,22 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-$container-large-desktop:  (940px + $grid-gutter-width);
-
 $black1:        #131313;
 $black2:        #333333;
-$blue1:         #548AD0;
+$blue1:         #1881a2;
 $blue2:         #1356AB;
 $blue3:         #AAC9F0;
 $green1:        #2A8695;
+$green2:        #75B46E;
+$btngreen:      #45b29d;
 $white:         #FCFCFC;
 $lightgrey:     #ECF0F1;
 $yellow:        #F3BB41;
 $back:          #f4f5f7;
+$red:           #C34C39;
 $font1:         "Open Sans", sans-serif;
 $font2:         "Roboto", sans-serif;
+
 
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto:400,100,300,500,700");
@@ -108,7 +110,7 @@ NAVBAR
     font-weight: 400;
     font-size: 1.8em;
     &:hover {
-      color: $green1;
+      color: $red;
     }
   }
   .navbar-nav.navbar-right li a {
@@ -153,11 +155,20 @@ FOOTER
 ************************************/
 
 footer {
-  background: $green1;
+  background: rgba($black1, 0.7);
   padding: 1.2em 0;
   color: $white;
   h4 {
     margin: 0;
+  }
+  a {
+    color: $white;
+    &:hover {
+      color: $green1;
+    }
+    &:active {
+      color: $white;
+    }
   }
 }
 
@@ -199,6 +210,30 @@ HOMEPAGE
   }
 }
 
+#intro {
+  text-align: justify;
+  background: $blue1;
+  color: $white;
+}
+
+.boxes {
+  border: 1px solid $black1;
+  border-radius: 4px;
+  text-align: center;
+  background: $white;
+  .top {
+    color: $white;
+    background: $red;
+    padding: 0.3em;
+  }
+  p {
+    padding: 1em;
+  }
+}
+
+#courses {
+  background: darken($white, 3%);
+}
 /************************************
 COURSES  
 ************************************/
@@ -325,6 +360,18 @@ COURSES
 
 img.rounded {
   border-radius: 100%;
+}
+
+.btn-green {
+  color: $white;
+  background: $btngreen;
+  border: 2px solid darken($btngreen, 10%);
+  margin-bottom: 1em;
+  border-radius: 2px;
+  &:hover {
+    background: darken($btngreen, 5%);
+    color: $white;
+  }
 }
 
 
