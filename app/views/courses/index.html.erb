@@ -1,32 +1,60 @@
-<section>
-
-	<div class="container">
-
-		<h2>These are my courses</h2>
-
-		<% @courses.each do |course| %>
-			<div class="col-md-4">
-    		<div class="courses">
-		    	<%= link_to image_tag(course.image.url(:medium)), course, class: "img-responsive cold" %>
-		    	<div class="courseinfo">
-				    <h3><%= link_to course.name, course %></h3>
-				    <p class="lead"><%= course.description %></p>
-				    <%= link_to "View Now", course, class: "btn btn-lg btnStart" %><br>
-				    <% if user_signed_in? && current_user.admin == true %>
-					    <%= link_to 'Show', course, class: 'btn btn-info' %>
-					    <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-primary' %>
-					    <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-					  <% end %>
-					 </div>
-				 </div>
-		   </div>
-
-	  <% end %>
-
-	  <% if user_signed_in? && current_user.admin == true %>
-  		<%= link_to "Create Course", new_course_path, class: 'btn btn-default' %>
-  	<% end %>
-
+<section id="intro">
+	<div id="vidback">
+		<video id="video_background" src="https://d2p52n04yb9sso.cloudfront.net/uploads/4284ad20e53b11e489116b52fbc4b11d/mp4/natenormal.mp4" autoplay loop>
 	</div>
-	
+	 <div class="overlay"></div>
+	  <div class="intro-body ">
+	     <div class="text-center">
+	       <p class="intro-text">Aprender anywhere</p>
+	     </div>
+	  </div> 
+</section>
+
+<section id="hello"> 
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<p class="lead">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="courses">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="row">
+					<% @courses.each do |course| %>
+						<div class="col-md-4">
+			    		<div class="boxes">
+			    			<div class="top">
+			    				<h3><%= link_to course.name, course %></h3>
+			    			</div>
+			    			<p><%= course.description %></p>
+			    			<%= link_to "View Now", course, class: "btn btn-lg btn-green" %><br>
+						    <% if user_signed_in? && current_user.admin == true %>
+							    <%= link_to 'Show', course, class: 'btn btn-info' %>
+							    <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-primary' %>
+							    <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+							  <% end %>
+							</div>
+						</div>
+				  <% end %>
+
+				  <% if user_signed_in? && current_user.admin == true %>
+			  		<%= link_to "Create Course", new_course_path, class: 'btn btn-default' %>
+			  	<% end %>
+
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
