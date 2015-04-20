@@ -10,14 +10,14 @@ $blue2:         #1356AB;
 $blue3:         #AAC9F0;
 $green1:        #2A8695;
 $green2:        #75B46E;
+$orange:        #e27a3f;
 $btngreen:      #45b29d;
 $white:         #FCFCFC;
 $lightgrey:     #ECF0F1;
-$yellow:        #f7ab24; 
-$back:          #f4f5f7;
+$yellow:        #f7ab24;
 $red:           #C34C39;
-$font1:         "Open Sans", sans-serif;
-$font2:         "Roboto", sans-serif;
+$font1:         "Roboto", sans-serif;
+$font2:         "Open Sans", sans-serif;
 
 
 
@@ -29,7 +29,7 @@ body {
   font-size: 16px;
   color: $black2;
   margin: 0; 
-  background: linear-gradient(rgba($back, 0.85), rgba($back, 0.65)), image-url('backimg.png') repeat;
+  background: rgba($white, 0.65);
 }
 
 a, a:hover {
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-  padding: 80px 0;
+  padding: 2em 0;
 }
 
 button.close {
@@ -95,7 +95,7 @@ NAVBAR
   border-radius: 0;
   background: rgba($black1, 0.75);
   border: none;
-  border-top: 6px solid $green1;
+  border-top: 3px solid $green1;
   .navbar-toggle {
     border-color: $black1;
     &:hover {
@@ -110,7 +110,7 @@ NAVBAR
     font-weight: 400;
     font-size: 1.8em;
     &:hover {
-      color: $red;
+      color: $blue1;
     }
   }
   .navbar-nav.navbar-right li a {
@@ -123,6 +123,7 @@ NAVBAR
       border: 1px solid $green1;
       border-radius: 5px;
       color: $green1;
+      font-weight: 400;
       &:hover {
         color: $white;
         background: $green1;
@@ -151,24 +152,90 @@ NAVBAR
 }
 
 /************************************
-FOOTER 
+HOME PAGE (Course Index)
 ************************************/
 
-footer {
-  background: rgba($black1, 0.7);
-  padding: 1.2em 0;
-  color: $white;
-  h4 {
-    margin: 0;
-  }
-  a {
+#intro {
+  width: 100%;
+  z-index: -4;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.intro-body {
+    z-index: 1;
+    padding-top: 15%;
+    line-height: 1;
     color: $white;
-    &:hover {
-      color: $green1;
-    }
-    &:active {
+    font-size: 1.75em;
+    text-align: center;
+    min-height: 500px;
+}
+
+#video_background {
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -3;
+    background: cover;
+}
+
+.overlay {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($black1, 0.30);
+    width: 100%;
+    height: 100%;   
+}
+
+#about {
+  text-align: justify;
+  background: linear-gradient(rgba($yellow, 0.79), rgba($yellow, 0.79)), image-url("paisley.png") repeat;
+  color: $white;
+  z-index: 3;
+}
+
+#course{
+  background: darken($white, 3%);
+}
+
+.boxes {
+  border: 1px solid $black1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  text-align: center;
+  background: $white;
+  .top {
+    background: $blue1;
+    padding: 0.3em;
+    a {
       color: $white;
     }
+  }
+  p {
+    padding: 1em;
+  }
+}
+
+.btn-green {
+  color: $white;
+  background: $btngreen;
+  border: 2px solid darken($btngreen, 10%);
+  margin-bottom: 1em;
+  border-radius: 3px;
+  &:hover {
+    background: darken($btngreen, 5%);
+    color: $white;
   }
 }
 
@@ -259,93 +326,6 @@ img.rounded {
 }
 
 /************************************
-HOME PAGE (Course Index)
-************************************/
-
-#intro {
-  width: 100%;
-  z-index: -4;
-  text-align: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
-.intro-body {
-    z-index: 1;
-    padding-top: 15%;
-    line-height: 1;
-    color: $white;
-    font-size: 1.75em;
-    text-align: center;
-    min-height: 550px;
-}
-
-#video_background {
-    min-height: 100%;
-    min-width: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -3;
-    background: cover;
-}
-
-.overlay {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba($black1, 0.30);
-    width: 100%;
-    height: 100%;   
-}
-
-#hello {
-  text-align: justify;
-  background: $yellow;
-  color: $white;
-}
-
-#courses {
-  background: darken($white, 3%);
-}
-
-.boxes {
-  border: 1px solid $black1;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  text-align: center;
-  background: $white;
-  .top {
-    background: $blue1;
-    padding: 0.3em;
-    a {
-      color: $white;
-    }
-  }
-  p {
-    padding: 1em;
-  }
-}
-
-.btn-green {
-  color: $white;
-  background: $btngreen;
-  border: 2px solid darken($btngreen, 10%);
-  margin-bottom: 1em;
-  border-radius: 3px;
-  &:hover {
-    background: darken($btngreen, 5%);
-    color: $white;
-  }
-}
-
-/************************************
 COURSE SHOW
 ************************************/
 
@@ -357,24 +337,46 @@ COURSE SHOW
   margin-top: -90px;
   padding-top: 15%;
   z-index: -1;
-  height:
-  h1 {
-    text-transform: uppercase;
-    font-size: 4em;
-    color: $white;
-    font-weight: 400;
-  }
   p {
     color: $white;
     font-size: 2em;
     font-weight: 200;
     text-align: center;
+    line-height: 1.2;
   }
 }
 
 .courses {
-  background: $green1;
+  background: $orange;
   color: $white;
+}
+
+#course-description {
+  background: $white;
+  ul {
+    padding-left: 20px;
+    li {
+      font-size: 1.2em;
+    }
+  }
+}
+
+#sign-up {
+  background: $lightgrey;
+  color: $black1;
+  h2 {
+    margin-top: 4px;
+  }
+  .btn {
+    color: $white;
+    background: $red;
+    border: 2px solid darken($red, 15%);
+    border-radius: 3px;
+    margin: 0;
+    &:hover {
+      background: lighten($red, 5%);
+    }
+  }
 }
 
 /************************************
@@ -384,6 +386,28 @@ LESSONS
 .video {
   max-width: 900px;
   margin: 0 auto;
+}
+
+/************************************
+FOOTER 
+************************************/
+
+footer {
+  background: rgba($black1, 0.7);
+  padding: 1.2em 0;
+  color: $white;
+  h4 {
+    margin: 0;
+  }
+  a {
+    color: $white;
+    &:hover {
+      color: $green1;
+    }
+    &:active {
+      color: $white;
+    }
+  }
 }
 
 /************************************
@@ -420,6 +444,9 @@ MEDIA QUERIES AND RESPONSIVENESS
         #vidback {
             display: none;
         }
+    }
+    .main .row {
+      padding-top: 20%;
     }
 }
 

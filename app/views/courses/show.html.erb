@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<p class="lead">
+				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt.
 				</p>
@@ -23,18 +23,78 @@
 	</div>
 </section>
 
-<section>
+<section id="course-description">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<h1><%= @course.name %></h1>
 				<p class="lead"><%= @course.description %></p>
-				<%= image_tag @course.image.url(:medium) %>
+				<!-- <%= image_tag @course.image.url(:medium) %> -->
+			</div>
+
+			<div class="clearfix"></div><hr />
+
+			<div class="col-md-9 col-md-offset-2">
+				<div class="row">
+			
+					<div class="col-md-4">
+						<h3>¿Para quién es?</h3>
+						<ul>
+							<li>Perfil 1</li>
+							<li>Perfil 2</li>
+							<li>Perfil 3</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h3>¿Que obtendrás?</h3>
+						<ul>
+							<li>Cosa 1</li>
+							<li>Cosa 2</li>
+							<li>Cosa 3</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h3>¿Que aprenderás?</h3>
+						<ul>
+							<li>Aprender 1</li>
+							<li>Aprender 2</li>
+							<li>Aprender 3</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="clearfix"></div><hr>
+
+			<div class="col-md-9 col-md-offset-2">
+				<div class="row">
+					<h2>¿Qué dicen nuestros estudiantes?</h2>
+				</div>
+			</div>
+
 
 				<% if user_signed_in? && current_user.admin == true %>
 					<%= link_to "Back", courses_path, class: "btn btn-lg btn-danger" %>
 					<%= link_to "Edit", edit_course_path(@course), class: "btn btn-lg btn-info" %>
 				<% end %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="sign-up">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-md-offset-2">
+				<div class="row">
+					<div class="col-sm-7">
+						<h2>Aprende ahora!</h2>
+					</div>
+					<div class="col-sm-5">
+						<%= link_to "Empezar Right Now!", course_path, class: "btn btn-lg btn-block" %>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
