@@ -199,7 +199,7 @@ HOME PAGE (Course Index)
 
 #about {
   text-align: justify;
-  background: linear-gradient(rgba($yellow, 0.79), rgba($yellow, 0.79)), image-url("paisley.png") repeat;
+  background: linear-gradient(33deg, rgba($yellow, 0.99), rgba($yellow, 0.97)), image-url("maze.jpg") repeat;
   color: $white;
   z-index: 3;
 }
@@ -300,16 +300,10 @@ BLOGS
         margin-right: 1.5em;
       }
     }
-    .fa {
+    .blog-fa {
       color: $blue1;
       &:hover {
-        color: $green1;
-      }
-    }
-    .fa-stack.fa-lg {
-      color: $blue1;
-      &:hover {
-        color: $green1;
+        color: $red;
       }
     }
     .author {
@@ -330,7 +324,7 @@ COURSE SHOW
 ************************************/
 
 .main {
-  background: image-url('lemons.jpg') center top;
+  background: image-url('learn.jpg') center bottom;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -438,7 +432,7 @@ MEDIA QUERIES AND RESPONSIVENESS
 
 @media (max-width: 767px) {
     #intro {
-        background: image-url('lemons.jpg') no-repeat center top;
+        background: image-url('learn.jpg') no-repeat center bottom;
         height: 450px;
         background-size: cover;
         #vidback {
@@ -448,6 +442,10 @@ MEDIA QUERIES AND RESPONSIVENESS
     .main .row {
       padding-top: 20%;
     }
+  .img-responsive.small-img {
+    width: 120px;
+    margin: 10px auto;
+  }
 }
 
 @media (max-width: 940px) {
