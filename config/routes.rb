@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get "about" => "pages#about"
   root 'courses#index'
 
   match '/404', to: 'errors#file_not_found', via: :all

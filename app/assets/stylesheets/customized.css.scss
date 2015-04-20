@@ -173,118 +173,8 @@ footer {
 }
 
 /************************************
-HOMEPAGE  
+BLOGS
 ************************************/
-
-.main {
-  background: image-url('lemons.jpg') center top;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  margin-top: -90px;
-  padding-top: 15%;
-  z-index: -5;
-  height:
-  h1 {
-    text-transform: uppercase;
-    font-size: 4em;
-    color: $white;
-    font-weight: 400;
-  }
-  p {
-    color: $white;
-    font-size: 2em;
-    font-weight: 200;
-    text-align: center;
-  }
-}
-
-#second {
-  background: linear-gradient(to bottom, #2A8695,  #2A8695 5%, #BDF4D8 95%);
-  color: $white;
-}
-
-#radient {
-  background: linear-gradient(to bottom, #2A8695,  #2A8695 5%, #BDF4D8 95%);
-  color: $white;
-  h1 {
-    font-size: 5em;
-  }
-}
-
-#hello {
-  text-align: justify;
-  background: $yellow;
-  color: $white;
-}
-
-.boxes {
-  border: 1px solid $black1;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  text-align: center;
-  background: $white;
-  .top {
-    background: $blue1;
-    padding: 0.3em;
-    a {
-      color: $white;
-    }
-  }
-  p {
-    padding: 1em;
-  }
-}
-
-#courses {
-  background: darken($white, 3%);
-}
-/************************************
-COURSES  
-************************************/
-
-.courses {
-  border: rgba($black1, 0.2) 1px solid;
-  border-radius: 5px;
-  background: rgba(#FFF, 0.75);
-  padding: 10px;
-  margin: 20px 0;
-  text-align: center;
-  float: left;
-  h3 a {
-    color: $black1;
-    font-weight: 400;
-    &:hover {
-      color: $blue2;
-    }
-  }
-  .courseinfo {
-    padding: 0 2em;
-  }
-  .btnStart {
-    margin: 0.5em 0.3em;
-    padding: 0.8em 3em;
-    color: $white;
-    background: $green1;
-  }
-  img {
-    border-radius: 100%;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    &:hover {
-      opacity: 0.7;
-      transform: scale(1.03);
-    }
-  }
-}
-
-.video {
-  max-width: 900px;
-  margin: 0 auto;
-}
 
 #blogs {
   border: 1px solid rgba($black1, 0.13);
@@ -368,17 +258,9 @@ img.rounded {
   border-radius: 100%;
 }
 
-.btn-green {
-  color: $white;
-  background: $btngreen;
-  border: 2px solid darken($btngreen, 10%);
-  margin-bottom: 1em;
-  border-radius: 3px;
-  &:hover {
-    background: darken($btngreen, 5%);
-    color: $white;
-  }
-}
+/************************************
+HOME PAGE (Course Index)
+************************************/
 
 #intro {
   width: 100%;
@@ -390,32 +272,14 @@ img.rounded {
   -o-background-size: cover;
 }
 
-@media(min-width:980px) {
-    #intro {
-        padding: 0;
-        .intro-body {
-          min-height: 550px;
-            .intro-text {
-                font-size: 25px;
-            }
-        }
-    }
-}
-
-@media(max-width:979px) {
-    #intro {
-        padding: 0;
-        .intro-body {
-          min-height: 550px;
-            .intro-text {
-                font-size: 25px;
-            }
-            padding: 20%;
-        }
-        .overlay {
-            height: 100%;
-        }
-    }
+.intro-body {
+    z-index: 1;
+    padding-top: 15%;
+    line-height: 1;
+    color: $white;
+    font-size: 1.75em;
+    text-align: center;
+    min-height: 550px;
 }
 
 #video_background {
@@ -430,24 +294,6 @@ img.rounded {
     background: cover;
 }
 
-@media (max-width: 767px) {
-    #intro {
-        background: image-url('lemons.jpg') no-repeat center top;
-        background-size: cover;
-        #vidback {
-            display: none;
-        }
-    }
-}
-
-.intro-body {
-    z-index: 1;
-    padding-top: 15%;
-    line-height: 1;
-    color: $white;
-    width: 100%;
-}
-
 .overlay {
     z-index: -1;
     position: absolute;
@@ -458,16 +304,124 @@ img.rounded {
     height: 100%;   
 }
 
-.courseDesc {
+#hello {
+  text-align: justify;
+  background: $yellow;
+  color: $white;
+}
+
+#courses {
+  background: darken($white, 3%);
+}
+
+.boxes {
+  border: 1px solid $black1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  text-align: center;
+  background: $white;
+  .top {
+    background: $blue1;
+    padding: 0.3em;
+    a {
+      color: $white;
+    }
+  }
+  p {
+    padding: 1em;
+  }
+}
+
+.btn-green {
+  color: $white;
+  background: $btngreen;
+  border: 2px solid darken($btngreen, 10%);
+  margin-bottom: 1em;
+  border-radius: 3px;
+  &:hover {
+    background: darken($btngreen, 5%);
+    color: $white;
+  }
+}
+
+/************************************
+COURSE SHOW
+************************************/
+
+.main {
+  background: image-url('lemons.jpg') center top;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: -90px;
+  padding-top: 15%;
+  z-index: -1;
+  height:
+  h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+    color: $white;
+    font-weight: 400;
+  }
+  p {
+    color: $white;
+    font-size: 2em;
+    font-weight: 200;
+    text-align: center;
+  }
+}
+
+.courses {
   background: $green1;
   color: $white;
 }
 
+/************************************
+LESSONS
+************************************/
+
+.video {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 /************************************
 MEDIA QUERIES AND RESPONSIVENESS
 ************************************/
 
+@media(min-width:980px) {
+    #intro {
+        padding: 0;
+        .intro-body {
+          font-size: 1.75em;
+        }
+    }
+}
+
+@media(max-width:979px) {
+    #intro {
+        padding: 0;
+        .intro-body {
+          font-size: 1.75em;
+          padding: 20%;
+        }
+        .overlay {
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #intro {
+        background: image-url('lemons.jpg') no-repeat center top;
+        height: 450px;
+        background-size: cover;
+        #vidback {
+            display: none;
+        }
+    }
+}
 
 @media (max-width: 940px) {
   .video {
