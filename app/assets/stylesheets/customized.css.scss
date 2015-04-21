@@ -341,7 +341,7 @@ COURSE SHOW
 }
 
 .courses {
-  background: $orange;
+  background: linear-gradient(33deg, rgba($orange, 0.96), rgba($orange, 0.99)), image-url("maze.jpg") repeat;;
   color: $white;
 }
 
