@@ -5,19 +5,22 @@
 
 $black1:        #131313;
 $black2:        #333333;
-$blue1:         #1881a2;
-$blue2:         #1356AB;
-$blue3:         #AAC9F0;
-$green1:        #2A8695;
-$green2:        #75B46E;
-$orange:        #e27a3f;
-$btngreen:      #45b29d;
-$white:         #FCFCFC;
-$lightgrey:     #ECF0F1;
-$yellow:        #f7ab24;
-$red:           #C34C39;
+$blue1:         #075E6A; // I don't think that I am using this anywhere
+$blue2:         #1356AB; // I dont' think that I am using this anywhere either
+$blue3:         #AAC9F0; // This is being used in header
+$green1:        #2A8695; // This is the main color for the site
+$green2:        #74BFC9; // This is a lighter green
+$orange:        #F39641; // This will be used in the courses show page
+$btngreen:      #45b29d; // This is the green sign up button
+$white:         #FCFCFC; // This is used everywhere
+$lightgrey:     #ECF0F1; // This is also used frequently
+$yellow:        #f7ab24; // I don't think that I am using this anywhere
+$red:           #C34C39; // I don't think that I am using this anywhere
+$purple:        #566EB7; // This is used for some hover effects
 $font1:         "Roboto", sans-serif;
 $font2:         "Open Sans", sans-serif;
+
+$brand-info:    #2A8695;
 
 
 
@@ -110,14 +113,14 @@ NAVBAR
     font-weight: 400;
     font-size: 1.8em;
     &:hover {
-      color: $blue1;
+      color: $blue3;
     }
   }
   .navbar-nav.navbar-right li a {
     color: $white;
     font-weight: 300;
     &:hover {
-      color: $green1;
+      color: $blue3;
     }
     &.btn {
       border: 1px solid $green1;
@@ -199,7 +202,7 @@ HOME PAGE (Course Index)
 
 #about {
   text-align: justify;
-  background: linear-gradient(33deg, rgba($yellow, 0.99), rgba($yellow, 0.97)), image-url("maze.jpg") repeat;
+  background: linear-gradient(33deg, rgba($green2, 0.99), rgba($green2, 0.80)), image-url("maze.jpg") repeat;
   color: $white;
   z-index: 3;
 }
@@ -216,14 +219,21 @@ HOME PAGE (Course Index)
   text-align: center;
   background: $white;
   .top {
-    background: $blue1;
+    background: $green1;
     padding: 0.3em;
+    h3 {
+      margin: 20px 0;
+      font-weight: 400;
+    }
     a {
       color: $white;
     }
   }
   p {
     padding: 1em;
+    font-weight: 300;
+    text-align: left;
+    font-size: 1.1em;
   }
 }
 
@@ -245,7 +255,7 @@ BLOGS
 
 #blogs {
   border: 1px solid rgba($black1, 0.13);
-  border-top: 6px solid $blue1;
+  border-top: 6px solid $green1;
   border-radius: 0 0 5px 5px;
   background: $white;
   color: $black2;
@@ -303,7 +313,7 @@ BLOGS
     .blog-fa {
       color: $blue1;
       &:hover {
-        color: $red;
+        color: $purple;
       }
     }
     .author {
@@ -341,7 +351,7 @@ COURSE SHOW
 }
 
 .courses {
-  background: linear-gradient(33deg, rgba($orange, 0.96), rgba($orange, 0.99)), image-url("maze.jpg") repeat;;
+  background: linear-gradient(305deg, rgba($orange, 0.90), rgba($orange, 0.99)), image-url("maze.jpg") repeat;;
   color: $white;
 }
 
@@ -363,12 +373,12 @@ COURSE SHOW
   }
   .btn {
     color: $white;
-    background: $red;
-    border: 2px solid darken($red, 15%);
+    background: $green1;
+    border: 2px solid darken($green1, 8%);
     border-radius: 3px;
     margin: 0;
     &:hover {
-      background: lighten($red, 5%);
+      background: lighten($green1, 5%);
     }
   }
 }
@@ -396,7 +406,7 @@ footer {
   a {
     color: $white;
     &:hover {
-      color: $green1;
+      color: $blue3;
     }
     &:active {
       color: $white;

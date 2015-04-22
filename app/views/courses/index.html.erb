@@ -28,7 +28,7 @@
 <section id="course">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10 col-md-offset-1">
 				<div class="row">
 					<% @courses.each do |course| %>
 						<div class="col-md-4">
@@ -37,7 +37,7 @@
 			    				<h3><%= link_to course.name, course %></h3>
 			    			</div>
 			    			<p><%= course.stdesc %></p>
-			    			<%= link_to "View Now", course, class: "btn btn-lg btn-green" %><br>
+			    			<%= link_to "Ver Más", course, class: "btn btn-lg btn-green" %><br>
 						    <% if user_signed_in? && current_user.admin == true %>
 							    <%= link_to 'Show', course, class: 'btn btn-info' %>
 							    <%= link_to 'Edit', edit_course_path(course), class: 'btn btn-primary' %>
