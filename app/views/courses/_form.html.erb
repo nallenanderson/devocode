@@ -18,18 +18,43 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :description, "Descripción" %> <small>(Puedes incluir HTML)
+      <%= f.label "Descripción Breve" %> <small> (Para la página Index)</small>
+      <%= f.text_field :stdesc, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Título" %> <small>(Puedes incluir HTML)</small>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Mensaje" %> <small>(Puedes incluir HTML)</small>
+      <%= f.text_field :sales_message, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, "Descripción" %> <small>(Puedes incluir HTML)</small>
       <%= f.text_field :description, class: "form-control" %>
     </div>
 
-     <div class="form-group">
-	    <%= f.label :image %>
-	    <%= f.file_field :image, class: "form-control" %>
-	  </div>
+    <div class="form-group">
+      <%= f.label "Características" %> <small>(Puedes incluir HTML)</small>
+      <%= f.text_field :characteristics, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Testimoniales" %> <small>(Puedes incluir HTML)</small>
+      <%= f.text_field :testimonial, class: "form-control" %>
+    </div>
 
     <div class="actions">
-      <%= f.submit "Submit", class: "btn btn-lg btn-info" %>
-      <%= link_to 'Back', courses_path, class: "btn btn-lg btn-primary pull-right" %>
+      <%= f.submit "Guardar", class: "btn btn-lg btn-info" %>
+      <%= link_to 'Cancelar', courses_path, class: "btn btn-lg btn-danger pull-right" %>
     </div>
   </div><!-- PANEL-GROUP -->
 <% end %>
