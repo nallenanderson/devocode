@@ -21,27 +21,32 @@
 <section id="course-description">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8 col-md-offset-2 hider">
 				<h1><%= @course.name %></h1>
-				<p class="lead"><%= @course.description %></p>
-				<!-- <%= image_tag @course.image.url(:medium) %> -->
+				<p class="lead hideme"><%= @course.description %></p>
+			</div>
+
+			<div class="clearfix"></div><hr />
+
+			<div class="col-md-8 col-md-offset-2 hider">
+				<div class="row">
+					<div class="hideme">
+						<%= raw(@course.characteristics) %>
+					</div>
+				</div>
 			</div>
 
 			<div class="clearfix"></div><hr />
 
 			<div class="col-md-8 col-md-offset-2">
 				<div class="row">
-					<%= raw(@course.characteristics) %>
-				</div>
-			</div>
-
-			<div class="clearfix"></div><hr>
-
-			<div class="col-md-8 col-md-offset-2">
-					<div class="row">
+					<div class="col-md-12 hider">
 						<h2>¿Qué dicen nuestros estudiantes?</h2>
-						<%= raw(@course.testimonial) %>
+						<div class="hideme">
+							<%= raw(@course.testimonial) %>
+						</div>
 					</div>
+				</div>
 			</div>
 
 		</div>
