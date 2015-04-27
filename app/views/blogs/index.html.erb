@@ -1,5 +1,12 @@
 <section>
   <div class="col-md-8 col-md-offset-2">
+    <select id="blogs">
+      <option value='ALL' selected="selected">Todos</option>
+      <option value="Rails">Rails</option>
+      <option value="HTML">HTML</option>
+      <option value="JS">JS</option>
+      <option value="CSS">CSS</option>
+    </select>
     <div id="blogs">
       <div class="heading">
         <h4>BLOG FOR QUICK LEARNING</h4>
@@ -25,12 +32,12 @@
             <%= link_to 'Edit', edit_blog_path(blog), class: "btn btn-info" %>
             <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
           <% end %>
-
+          <span class="spec"><%= blog.category %></span>
         </div>
       <% end %>
-      <% if user_signed_in? && current_user.admin == true %>
+    </div>
+    <% if user_signed_in? && current_user.admin == true %>
         <%= link_to 'New Blog', new_blog_path, class: "btn btn-info btn-lg" %>
       <% end %>
-    </div>
   </div>
 </section>

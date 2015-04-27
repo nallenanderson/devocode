@@ -323,6 +323,22 @@ BLOGS
       display: none!important;
     }
   }
+  .spec {
+    display: none;
+  }
+}
+
+select#blogs {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: $green1;
+  width: 88px;
+  font-size: 1.2em;
+  font-weight: 400;
+  -webkit-appearance: none;
 }
 
 img.rounded {

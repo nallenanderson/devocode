@@ -15,3 +15,20 @@ $(window).scroll( function(){
         }           
     });     
 });
+
+$(function() {
+    $('#blogs').change(function(){
+        var criteria = $(this).val();
+        if(criteria == 'ALL'){
+            $('.blog').show();
+            return;
+        }
+        $('.spec').each(function(i,option){
+            if($(this).html() == criteria){
+                $(this).parent().fadeIn(1000);
+            }else {
+                $(this).parent().fadeOut(1000);
+            }
+        });
+    });
+})
