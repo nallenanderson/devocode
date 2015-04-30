@@ -414,7 +414,7 @@ FOOTER
 
 footer {
   background: rgba($black1, 0.7);
-  padding: 1.2em 0;
+  padding: 18px 0;
   color: $white;
   h4 {
     margin: 0;
@@ -424,8 +424,11 @@ footer {
     &:hover {
       color: $blue3;
     }
-    &:active {
+    &:active, &:focus, &:visited {
       color: $white;
+    }
+    span {
+      margin-top: -8px;
     }
   }
 }
