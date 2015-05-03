@@ -399,6 +399,14 @@ COURSE SHOW
   }
 }
 
+.hider {
+  display: block;
+}
+
+.hider .hideme {
+  opacity: .05;
+}
+
 /************************************
 LESSONS
 ************************************/
@@ -431,14 +439,6 @@ footer {
       margin-top: -8px;
     }
   }
-}
-
-.hider {
-  display: block;
-}
-
-.hider .hideme {
-  opacity: .05;
 }
 
 /************************************
