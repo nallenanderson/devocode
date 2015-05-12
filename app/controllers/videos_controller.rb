@@ -1,6 +1,5 @@
 class VideosController < ApplicationController
   before_action :set_video, only: [:show, :edit, :update, :destroy]
-  before_action :set_course, only: [:show, :edit, :update, :destroy]
 
   def index
     
@@ -8,8 +7,6 @@ class VideosController < ApplicationController
   end
 
   def show
-    
-    @video = Video.find(params[:id])
   end
 
   def new
@@ -22,7 +19,6 @@ class VideosController < ApplicationController
   def create
     
     @video = Video.new(video_params)
-    @video.course_id = @course_id
 
     respond_to do |format|
       if @video.save
@@ -59,15 +55,11 @@ class VideosController < ApplicationController
 
   private
 
-    def set_course
-      @course = Course.find(params[:course_id])
-    end
-
     def set_video
-      @video = Video.find(params[:id])
+      @video = Video.friendly.find(params[:id])
     end
 
     def video_params
-      params.require(:video).permit(:name, :link, :description, :viewed, :course_id)
+      params.require(:video).permit(:name, :link, :description, :viewed)
     end
 end

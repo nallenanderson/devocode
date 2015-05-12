@@ -23,11 +23,10 @@
             <td><%= video.link %></td>
             <td><%= video.description %></td>
             <td><%= video.viewed %></td>
-            <td><%= video.course %></td>
             <% if user_signed_in? && current_user.admin == true %>
-              <td><%= link_to 'Show', course_video_path(@course, video) %></td>
-              <td><%= link_to 'Edit', edit_course_video_path(@course, video) %></td>
-              <td><%= link_to 'Destroy', course_video_path(@course, video), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Show', video %></td>
+              <td><%= link_to 'Edit', edit_video_path(video) %></td>
+              <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <% end %>
           </tr>
         <% end %>
@@ -36,7 +35,7 @@
 
     <br>
     <% if user_signed_in? && current_user.admin == true %>
-      <%= link_to 'New Video', new_course_video_path %>
+      <%= link_to 'New Video', new_video_path %>
     <% end %>
   </div>
 

@@ -1,3 +1,4 @@
 class Video < ActiveRecord::Base
-  belongs_to :course
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 end
