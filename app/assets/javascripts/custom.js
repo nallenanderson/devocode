@@ -5,7 +5,7 @@ $(function() {
   });
 });
 
-$(window).scroll( function(){    
+/*$(window).scroll( function(){    
     $('.hideme').each( function(i){           
         var bottom_of_object = $(this).offset().top + $(this).outerHeight();
         var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -14,7 +14,7 @@ $(window).scroll( function(){
             $(this).animate({'opacity':'1'},800);                   
         }           
     });     
-});
+});*/
 
 $(function() {
     $('#blogs').change(function(){
