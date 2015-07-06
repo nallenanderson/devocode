@@ -1,28 +1,13 @@
-== README
+# devocode
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This site is dedicated to teaching basic coding principles needed to make awesome websites.  Our catelog features courses on HTML, CSS, Javascript and Ruby on Rails.
 
-Things you may want to cover:
+You'll learn the essentials to get you up and creating great sites in a short amount of time.
 
-* Ruby version
+Come check us out at
 
-* System dependencies
+[devocode.com][1]
 
-* Configuration
+See you there.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[1]:http://www.devocode.com/

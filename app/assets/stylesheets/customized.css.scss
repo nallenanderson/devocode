@@ -170,7 +170,7 @@ HOME PAGE (Course Index)
 
 .intro-body {
     z-index: 1;
-    padding-top: 15%;
+    padding-top: 150px;
     line-height: 1;
     color: $white;
     font-size: 1.75em;
@@ -254,9 +254,10 @@ BLOGS
 ************************************/
 
 #blogs {
-  border: 1px solid rgba($black1, 0.13);
+  border: 1px solid rgba($black1, 0.05);
   border-top: 6px solid $green1;
-  border-radius: 0 0 5px 5px;
+  border-bottom: 6px solid $green1;
+  border-radius: 0;
   background: $white;
   color: $black2;
   padding: 0 0.8em 1em 0.8em;
@@ -424,7 +425,7 @@ footer {
     &:hover {
       color: $blue3;
     }
-    &:active, &:focus, &:visited {
+    &:active, &:focus {
       color: $white;
     }
     span {
@@ -451,7 +452,6 @@ MEDIA QUERIES AND RESPONSIVENESS
         padding: 0;
         .intro-body {
           font-size: 1.75em;
-          padding: 20%;
         }
         .overlay {
             height: 100%;
