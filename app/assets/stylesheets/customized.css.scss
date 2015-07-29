@@ -116,6 +116,9 @@ NAVBAR
       color: $blue3;
     }
   }
+  img {
+    max-height: 40px;
+  }
   .navbar-nav.navbar-right li a {
     color: $white;
     font-weight: 300;
@@ -439,35 +442,35 @@ MEDIA QUERIES AND RESPONSIVENESS
 ************************************/
 
 @media(min-width:980px) {
-    #intro {
-        padding: 0;
-        .intro-body {
-          font-size: 1.75em;
-        }
+  #intro {
+    padding: 0;
+    .intro-body {
+      font-size: 1.75em;
     }
+  }
 }
 
 @media(max-width:979px) {
-    #intro {
-        padding: 0;
-        .intro-body {
-          font-size: 1.75em;
-        }
-        .overlay {
-            height: 100%;
-        }
+  #intro {
+    padding: 0;
+    .intro-body {
+      font-size: 1.75em;
     }
+    .overlay {
+        height: 100%;
+    }
+  }
 }
 
 @media (max-width: 767px) {
-    #intro {
-        background: image-url('learn.jpg') no-repeat center bottom;
-        height: 450px;
-        background-size: cover;
-        #vidback {
-            display: none;
-        }
+  #intro {
+    background: image-url('learn.jpg') no-repeat center bottom;
+    height: 450px;
+    background-size: cover;
+    #vidback {
+        display: none;
     }
+  }
   .img-responsive.small-img {
     width: 120px;
     margin: 10px auto;

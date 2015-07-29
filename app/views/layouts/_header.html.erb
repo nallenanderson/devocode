@@ -10,7 +10,10 @@
           <span class="icon-bar"></span>
         </button>
 
-        <%= link_to "devocode", root_path, class: "navbar-brand" %>
+        <!--<%= link_to "devocode", root_path, class: "navbar-brand" %>-->
+        <%= link_to root_path do %>
+          <%= image_tag("devocode-logo1.png", class: "img-responsive") %>
+        <% end %>
       </div>
 
       <div id="sidr-right">
