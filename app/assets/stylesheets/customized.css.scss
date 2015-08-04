@@ -665,6 +665,20 @@ MEDIA QUERIES AND RESPONSIVENESS
     width: 120px;
     margin: 10px auto;
   }
+  #hello {
+    h1 {
+      font-size: 5em;
+    }
+    h2 {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  #hello h1 {
+    font-size: 3em;
+  }
 }
 
 @media (max-width: 940px) {
