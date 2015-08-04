@@ -17,7 +17,6 @@
 //= require bootstrap
 //= require angular
 //= require leaflet
-//= require turbolinks
 //= require_tree .
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
