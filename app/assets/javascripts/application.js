@@ -13,7 +13,14 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require bootstrap-sprockets
 //= require jquery.sidr
 //= require turbolinks
+//= require bootstrap
+//= require angular
+//= require leaflet
 //= require_tree .
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});

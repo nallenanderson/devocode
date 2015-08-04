@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'courses#index'
+  root 'pages#home'
+
+  get 'courses/index'
 
   resources :courses
   resources :videos

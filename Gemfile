@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.0'
+gem 'bundler', '>= 1.8.4'
 gem 'rails', '4.2.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'font-awesome-sass', '~> 4.3.0'
@@ -17,6 +18,12 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'awesome_print', group: :development
 gem "paperclip", "~> 4.2"
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-angular'
+  gem 'rails-assets-leaflet'
+end
 
 group :development, :test do
      gem 'sqlite3'
