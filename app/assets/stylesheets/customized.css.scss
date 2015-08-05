@@ -289,6 +289,10 @@ HOME PAGE (Course Index)
   background: linear-gradient(rgba($red, 0.95), rgba($red, 0.95)), image-url("backred.png") repeat;
   color: $white;
   height: auto;
+  p {
+    font-size: 24px;
+    line-height: 1.5;
+  }
 }
 
 #intro {
@@ -446,6 +450,9 @@ HOME PAGE (Course Index)
   &:hover {
     background: $white;
     color: $green;
+  }
+  &:focus, &:visited, &:active {
+    color: $white!important;
   }
 }
 
@@ -617,6 +624,8 @@ footer {
   background: rgba($black1, 0.75);
   padding: 18px 0;
   color: $white;
+  font-family: $font2;
+  font-weight: 400;
   h4 {
     margin: 0;
   }
