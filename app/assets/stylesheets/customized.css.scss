@@ -632,9 +632,6 @@ footer {
   a {
     color: $white;
     transition: all 0.4s ease-in-out;
-    .fa.fa-square-o.fa-stack-2x {
-      color: transparent;
-    }
     &:hover {
       color: $green;
     }
@@ -643,6 +640,9 @@ footer {
     }
     span {
       margin-top: -8px;
+    }
+    .fa {
+      font-size: 1.2em;
     }
   }
 }

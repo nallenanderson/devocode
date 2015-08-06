@@ -2,25 +2,24 @@
 	<div class="container-fluid">
 		<div class="col-sm-8 col-sm-offset-2">
 			<small>&copy; 2015 devocode, llp</small>
-			<%= mail_to "nate@devocode.com", target: "_top", class: "pull-right" do %>
-				<span class="fa-stack fa-lg">
-				  <i class="fa fa-square-o fa-stack-2x"></i>
-				  <i class="fa fa-envelope fa-stack-1x"></i>
-				</span>
-			<% end %>
+			<ul class="list-unstyled list-inline pull-right">
+				<li>
+					<%= mail_to "nate@devocode.com", target: "_top" do %>
+				  	<i class="fa fa-envelope"></i>
+					<% end %>
+				</li>
 
-			<%= link_to "http://www.github.com/nallenanderson/devocode", target: "_blank", class: "pull-right" do %>
-				<span class="fa-stack fa-lg">
-				  <i class="fa fa-square-o fa-stack-2x"></i>
-				  <i class="fa fa-github fa-stack-1x"></i>
-				</span>
-			<% end %>
-			<%= link_to "http://www.twitter.com/nallenanderson", target: "_blank", class: "pull-right" do %>
-				<span class="fa-stack fa-lg">
-				  <i class="fa fa-square-o fa-stack-2x"></i>
-				  <i class="fa fa-twitter fa-stack-1x"></i>
-				</span>
-			<% end %>
+				<li>
+					<%= link_to "http://www.github.com/nallenanderson/devocode", target: "_blank" do %>
+				  	<i class="fa fa-github"></i>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to "http://www.twitter.com/nallenanderson", target: "_blank" do %>
+				  	<i class="fa fa-twitter"></i>
+					<% end %>
+				</li>
+			</ul>
 		</div>
 	</div>
 </footer>
