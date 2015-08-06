@@ -4,19 +4,18 @@
 			<small>&copy; 2015 devocode, llp</small>
 			<ul class="list-unstyled list-inline pull-right">
 				<li>
-					<%= mail_to "nate@devocode.com", target: "_top" do %>
-				  	<i class="fa fa-envelope"></i>
+					<%= link_to "http://www.twitter.com/nallenanderson", target: "_blank" do %>
+				  	<i class="fa fa-twitter"></i>
 					<% end %>
 				</li>
-
 				<li>
 					<%= link_to "http://www.github.com/nallenanderson/devocode", target: "_blank" do %>
 				  	<i class="fa fa-github"></i>
 					<% end %>
 				</li>
 				<li>
-					<%= link_to "http://www.twitter.com/nallenanderson", target: "_blank" do %>
-				  	<i class="fa fa-twitter"></i>
+					<%= mail_to "nate@devocode.com", target: "_top" do %>
+				  	<i class="fa fa-envelope"></i>
 					<% end %>
 				</li>
 			</ul>
