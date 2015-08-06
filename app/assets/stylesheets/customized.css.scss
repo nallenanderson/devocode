@@ -129,9 +129,9 @@ NAVBAR
   margin-bottom: 0;
   padding: 10px 0;
   border-radius: 0;
-  background: rgba($black1, 0.75);
+  background: rgba($black1, 0.40);
   border: none;
-  border-top: 2px solid $green1;
+  border-top: 2px solid $green;
   z-index: 2;
   .navbar-toggle {
     border-color: $black1;
@@ -139,7 +139,7 @@ NAVBAR
       background: $white;
     }
     .icon-bar {
-      background: $green1;
+      background: $green;
     }
   }
   .navbar-brand {
@@ -162,13 +162,14 @@ NAVBAR
       color: $green;
     }
     &.btn {
-      border: 1px solid $green1;
+      border: 1px solid $white;
       border-radius: 5px;
-      color: $green1;
+      color: $white;
       font-weight: 400;
       &:hover {
         color: $white;
-        background: $green1;
+        background: $green;
+        border: 1px solid $green;
         font-weight: 400;
       }
     }
@@ -176,7 +177,7 @@ NAVBAR
   #sidr-right ul li a{
     color: $white;
     &:hover {
-      color: $green1;
+      color: $green;
     }
   }
   .navbar-toggle {
@@ -605,15 +606,6 @@ COURSE SHOW
       background: lighten($green1, 5%);
     }
   }
-}
-
-/************************************
-LESSONS
-************************************/
-
-.video {
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 /************************************

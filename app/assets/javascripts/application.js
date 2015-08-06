@@ -11,13 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.sidr
 //= require bootstrap
 //= require angular
 //= require leaflet
-//= require turbolinks
 //= require_tree .
 
 particlesJS.load('particles-js', 'assets/particles.json', function() {
