@@ -152,7 +152,8 @@ NAVBAR
   }
   img {
     max-height: 45px;
-    padding-top: 6px;
+    padding: 0;
+    margin: 0;
   }
   .navbar-nav.navbar-right li a {
     color: $white;
@@ -185,6 +186,13 @@ NAVBAR
     .icon-bar {
       height: 4px;
       color: $white;
+    }
+  }
+  .navbar-header button {
+    margin: 0;
+    padding: 0;
+    &:hover, &:focus {
+      background: transparent;
     }
   }
 }
@@ -283,6 +291,16 @@ HOME PAGE (Course Index)
   h2 {
     font-weight: 600;
     color: rgba($black1, 0.65)
+  }
+  h4 {
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+  img {
+    max-height: 140px;
+    width: auto;
+    display: inline-block;
+    margin: 30px auto 10 auto;
   }
 }
 
