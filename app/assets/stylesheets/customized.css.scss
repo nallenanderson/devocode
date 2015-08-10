@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Quicksand:400,300,700");
 
 $black1:        #131313;
 $black2:        #333333;
@@ -24,8 +25,6 @@ $font1:         "Open Sans", sans-serif;
 $font2:         "Quicksand", sans-serif;
 
 $brand-info:    #2A8695;
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Quicksand:400,300,700");
 
 html, body {
   width: 100%;
