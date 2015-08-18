@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :courses
   resources :videos
   resources :blogs
+  resources :leads
 
   devise_for :users
 

@@ -7,7 +7,7 @@
 				<h1>Connected</h1>
 				<h2>development</h2>
 				<p class="lead">Helping clients connect the dots between ideas, design, development and deployment.</p>
-				<%= link_to "Our Process", "#follower", class: "btn btn-lg btn-trans page-scroll" %>
+				<%= link_to "Our Process", "#follower", class: "btn btn-lg btn-trans one page-scroll" %>
 			</div>
 		</div>
 	</div>
@@ -42,20 +42,20 @@
 
 				<div class="row text-center does">
 					<div class="col-xs-3">
+						<%= image_tag('responsive.png', class: 'img-responsive') %>
+						<h4>Site Design</h4>
+					</div>
+					<div class="col-xs-3">
 						<%= image_tag('ruby.png', class: 'img-responsive') %>
-						<h4>Rails</h4>
+						<h4>Ruby on Rails</h4>
 					</div>
 					<div class="col-xs-3">
 						<%= image_tag('angular.png', class: 'img-responsive') %>
 						<h4>Angular JS</h4>
 					</div>
 					<div class="col-xs-3">
-						<%= image_tag('apple.png', class: 'img-responsive') %>
-						<h4>iOS</h4>
-					</div>
-					<div class="col-xs-3">
-						<%= image_tag('android.png', class: 'img-responsive') %>
-						<h4>Android OS</h4>
+						<%= image_tag('apps.png', class: 'img-responsive') %>
+						<h4>Mobile Apps</h4>
 					</div>
 				</div>
 
@@ -73,33 +73,39 @@
 					<div class="col-md-4">
 						<div class="boxes">
 							<div class="top blue">
-								<a class="define"></a>
+								<%= image_tag("define.png", class: "img-responsive pull-right")%>
 		    				<h3>Define</h3>
 		    			</div>
 		    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		    			<a class="btn btn-block btn-green">More Info</a>
+		    			<div class="container-fluid">
+		    				<a class="btn btn-block btn-black">What to Define ?</a>
+		    			</div>
 						</div>
 					</div>
 
 					<div class="col-md-4">
 						<div class="boxes">
 							<div class="top yellow">
-								<a class="develop"></a> 
+								<%= image_tag("develop.png", class: "img-responsive pull-right")%>
 		    				<h3>Develop</h3>
 		    			</div>
 		    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		    			<a class="btn btn-block btn-green">More Info</a>
+		    			<div class="container-fluid">
+		    				<a class="btn btn-block btn-black">How to Develop ?</a>
+		    			</div>
 						</div>
 					</div>
 
 					<div class="col-md-4">
 						<div class="boxes">
 							<div class="top green">
-								<a class="deploy"></a> 
+								<%= image_tag("deploy.png", class: "img-responsive pull-right")%>
 		    				<h3>Deploy</h3>
 		    			</div>
 		    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		    			<a class="btn btn-block btn-green">More Info</a>
+		    			<div class="container-fluid">
+		    				<a class="btn btn-block btn-black">Where to Deploy ?</a>
+		    			</div>
 						</div>
 					</div>
 
@@ -115,11 +121,32 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
+				<h2>Enough about us.  Let's talk about you...</h2>
+				<p class="lead">We want to know what we can do to make your project a success.  Get in touch so we can help you build something awesome.</p>
+				<%= form_for Lead.new, class: "inline" do |f| %>
+				  <div class="row">
+				    <div class="form-group col-md-4">
+				      <label>Name</label>
+				      <%= f.text_field :name, class: "form-control", placeholder: "Your name...", required: true %>
+				    </div>
+				    <div class="form-group col-md-4">
+				      <label>Email</label>
+				      <%= f.email_field :email, class: "form-control", placeholder: "Your email...", required: true %>
+				    </div>
+				    <div class="form-group col-md-4">
+				      <label>Telephone</label>
+				      <%= f.text_field :telephone, class: "form-control", placeholder: "Your phone..." %>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label>Message:</label>
+				    <%= f.text_area :message, rows: "4", class: "form-control", placeholder: "Tell us about you, your project, or anything else here...", required: true %>
+				  </div>
+				  <%= button_tag class: "btn btn-lg btn-trans two pull-right" do %>
+				  	Contact Us
+				  <% end %>
+				<% end %>
 				
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat.</p>
 				
 			</div>
 		</div>
