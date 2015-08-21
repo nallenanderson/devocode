@@ -6,6 +6,7 @@
 
 $black1:        #131313;
 $black2:        #333333;
+$black3:        #464c3e;
 $blue1:         #075E6A; // I don't think that I am using this anywhere
 $blue2:         #1881a2; // I dont' think that I am using this anywhere either
 $blue3:         #AAC9F0; // This is being used in header
@@ -116,10 +117,6 @@ button.close {
 .panel {
   background: rgba($white, 0.55);
 }
-.panel-default {
-  .panel-heading {
-  }
-}
 
 .form-control {
   font-size: 18px;
@@ -218,6 +215,10 @@ NAVBAR
   }
 }
 
+.lastone {
+  padding-right: 15px;
+}
+
 .sidr {
   font-family: $font1 !important;
   font-weight: 400 !important;
@@ -254,15 +255,16 @@ HOME PAGE (Course Index)
     margin: 20px 0 30px 0; 
   }
   .btn-black {
-    border: 1px solid #464c3e;
-    background: #464c3e;
+    border: 1px solid $black3;
+    background: $black3;
     margin: 0 auto 1em auto;
     color: $white;
     display: block;
+    border-radius: 0!important;
     transition: all 0.3s ease-in-out;
     &:hover {
       background: transparent;
-      color: #464c3e;
+      color: $black3;
     }
   }
 }
@@ -717,5 +719,34 @@ MEDIA QUERIES AND RESPONSIVENESS
   .video {
     max-width: 700px;
     margin: 0 auto;
+  }
+}
+
+// We can try these for the black buttons
+
+.btn.black {
+  display: inline-block;
+  font-family: $font1;
+  font-weight: 700;
+  letter-spacing: .1em;
+  font-size: .75em;
+  line-height: 1.37em;
+  text-align: center;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  background: transparent;
+  border-radius: 0;
+  color: $black2;
+  border: 1px solid $black1;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease-in-out,color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out,color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out,color 0.2s ease-in-out;
+  &:hover {
+    color: $white;
+    border: 1px solid $black1;
+    background: $black2;
   }
 }
