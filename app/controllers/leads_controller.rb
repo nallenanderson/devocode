@@ -12,7 +12,7 @@ class LeadsController < ApplicationController
 		@lead = Lead.new lead_params
 		if @lead.save
 			redirect_to root_path, notice: "Thanks for the message! One of our guys will reach out to you soon."
-			# LeadMailer.new_lead(@lead).deliver_later
+			LeadMailer.new_lead(@lead).deliver_now
 		else
 			redirect_to root_path, alert: "Oops! We weren't able to save your information. Give it another try."
 		end
