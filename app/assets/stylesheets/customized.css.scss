@@ -120,14 +120,13 @@ button.close {
 
 .form-control {
   font-size: 18px;
-  padding: 22px 8px;
   border-radius: 0;
   border: none;
   color: $red;
   font-weight: 400;
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
   font-weight: 300!important;
 }
 
