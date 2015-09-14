@@ -124,6 +124,9 @@ button.close {
   border: none;
   color: $red;
   font-weight: 400;
+  padding: 15px 12px;
+  height: auto;
+  background: rgba($white, 0.85);
 }
 
 ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
