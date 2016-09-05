@@ -41,7 +41,7 @@ body {
   font-weight: 200;
   font-size: 16px;
   color: $black2;
-  margin: 0; 
+  margin: 0;
   background: rgba($white, 0.65);
 }
 
@@ -122,7 +122,7 @@ button.close {
   font-size: 18px;
   border-radius: 0;
   border: none;
-  color: $red;
+  color: $black1;
   font-weight: 400;
   padding: 15px 12px;
   height: auto;
@@ -184,7 +184,7 @@ NAVBAR
     }
     &.btn {
       border: 1px solid $white;
-      border-radius: 5px;
+      border-radius: 2px;
       color: $white;
       font-weight: 400;
       &:hover {
@@ -254,7 +254,7 @@ HOME PAGE (Course Index)
   position: relative;
   background: $white;
   h2 {
-    margin: 20px 0 30px 0; 
+    margin: 20px 0 30px 0;
   }
   .btn-black {
     border: 1px solid $black3;
@@ -384,7 +384,7 @@ HOME PAGE (Course Index)
     left: 0;
     background: rgba($black1, 0.30);
     width: 100%;
-    height: 100%;   
+    height: 100%;
 }
 
 #about {
@@ -451,7 +451,7 @@ HOME PAGE (Course Index)
   background: $btngreen;
   border: 2px solid darken($btngreen, 10%);
   margin-bottom: 1em;
-  border-radius: 3px;
+  border-radius: 2px;
   &:hover {
     background: darken($btngreen, 5%);
     color: $white;
@@ -466,7 +466,7 @@ HOME PAGE (Course Index)
   font-size: 1.3em;
   border: 2px solid $white;
   margin-bottom: 2em;
-  border-radius: 5px;
+  border-radius: 2px;
   transition: all 0.6s ease-in-out;
   &.one:hover {
     background: $white;
@@ -498,7 +498,7 @@ BLOGS
     background: rgba($lightgrey, 0.83);
     color: $blue1;
     margin: 0 -0.8em;
-    padding: 0.5em 0.7em; 
+    padding: 0.5em 0.7em;
     h4 {
       font-weight: 400;
     }
@@ -624,7 +624,7 @@ COURSE SHOW
     color: $white;
     background: $green1;
     border: 2px solid darken($green1, 8%);
-    border-radius: 3px;
+    border-radius: 2px;
     margin: 0;
     &:hover {
       background: lighten($green1, 5%);
@@ -633,7 +633,7 @@ COURSE SHOW
 }
 
 /************************************
-FOOTER 
+FOOTER
 ************************************/
 
 footer {
